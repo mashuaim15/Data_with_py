@@ -8,5 +8,5 @@ Data Engineering with Python --- by Brian Ma
 3.😘 Python: Read from Mysql (or other dbs), modify data with pandas, and exported to excel file or multiple excel files with user set rows (auto-filping):
 https://github.com/mashuaim16/data_with_py/blob/main/sql_to_excel.py
 
-4.😁 Python: find difference from two excel files: https://github.com/mashuaim16/data_with_py/blob/main/python_find_difference_from_two_excel
+4.😁 Python: find difference between two excel files: https://github.com/mashuaim16/data_with_py/blob/main/python_find_difference_from_two_excel
 
