@@ -1,0 +1,25 @@
+import pandas as pd
+
+df = pd.DataFrame({'id': [1, 2, 2, 3, 3, 4],
+                    'B': [400, 500, 550, 600, 700, 800]})
+                    
+df2 = pd.DataFrame({'id': [1, 2, 3, 4],
+                    'C': ['raw', 'rare', 'medium', 'well done']})
+
+# perform mysql like inner join with pandas, match column C with 'id'
+
+df3 = pd.merge(df,df2,how='inner',left_on=['id'],right_on=['id'])
+
+print(df3)
+
+
+
+# output result:
+
+   id    B          C
+# 0   1  400        raw
+# 1   2  500       rare
+# 2   2  550       rare
+# 3   3  600     medium
+# 4   3  700     medium
+# 5   4  800  well done
