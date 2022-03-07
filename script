@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+import time
+from urllib.request import urlopen, Request
+import datetime
+from dateutil import parser
+from datetime import datetime
+import json
+import requests
+import pprint as pt
+
+
+url = 'sample.api.com'
+_json = requests.get(url).json()
+k_json = _json['x']
+v_json = _json['y']
+
+#lets suppose we have two json lists like this:
+k_json = ["A","B","C","D","E"]
+v_json = [1,2,3,4,5]
+
+#function to match the two lists and get a matched-list json output:
+def get_json_list(k_json,v_json):
+    dict_l = dict(zip(k_json, v_json))
+    j_str = json.dumps(dict_l,indent=4,ensure_ascii=False)
+    print(j_str)
+    
+    
+    
+if __name__ == "__main__":
+    get_json_list(k_json,v_json)
+    
+
+#output :
+{
+    "A": 1,
+    "B": 2,
+    "C": 3,
+    "D": 4,
+    "E": 5
+}
