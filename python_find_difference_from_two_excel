@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+#utf 8 encoding
+
+#compare differenct b/w two excel file's columns
+import os
+import pandas as pd
+
+#change into directory that the script is in:
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+os.chdir(dname)
+
+#pick first two thousand authors
+df = pd.read_excel('first_author_list.xlsx', index_col=False)
+l1 = df['author'][0:2000].to_list()
+
+df2 = pd.read_excel('second_author_list.xlsx', index_col=False)
+l2 = df2['author'][0:2000].to_list()
+
+#find difference from above content
+l3 = list(set(l1) - set(l2))
+print('difference b/w 1st file and 2nd file is: ')
+print(len(l3))
+l4 = list(set(l2) - set(l1))
+print('difference b/w 2nd file and 1st file is: ')
+print(len(l3))
