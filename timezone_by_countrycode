@@ -1,0 +1,14 @@
+import pytz
+from datetime import datetime
+
+timestamp = 1647480454
+d = datetime.fromtimestamp(timestamp, pytz.timezone(pytz.country_timezones('US')[0]))
+print(d)
+
+#2022-03-16 21:27:34-04:00
+
+f_date = d.isoformat(' ', 'seconds')
+f_date = f_date[:-6]
+print (f_date)
+
+# output ---> 2022-03-16 21:27:34
