@@ -10,3 +10,5 @@ https://github.com/mashuaim16/data_with_py/blob/main/sql_to_excel.py
 
 4.😁 Python: find difference between two excel files: https://github.com/mashuaim16/data_with_py/blob/main/python_find_difference_from_two_excel
 
+5.😎 convert timezone by input CountryCode. yyyy-mm-dd HH-mm-ss format: https://github.com/mashuaim15/data_with_py/blob/main/timezone_by_countrycode
+
